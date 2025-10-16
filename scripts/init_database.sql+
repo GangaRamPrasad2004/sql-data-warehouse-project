@@ -12,18 +12,18 @@ Warning:
   and ensure you have proper backups before running this script.
 */
 USE master;
---Drop and recreate the 'DataWarehouse'
-If EXISTS(Select 1 FROM sys.databases WHERE name="DataWarehouse")
+--Drop and recreate the 'DataWareHouse1'
+If EXISTS(Select 1 FROM sys.databases WHERE name="DataWareHouse1")
 BEGIN
-   ALTER DATABASE DataWrehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-   DROP DATABASE DataWarehouse;
+   ALTER DATABASE DataWreHouse1 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+   DROP DATABASE DataWareHouse1;
 END;
 GO
----- Create Te "DatabaseWarehouse" datbase
-CREATE DATABASE DatabaseWarehouse;
+---- Create Te "DatabaseWareHouse1" datbase
+CREATE DATABASE DatabaseWareHouse1;
 GO
 
-USE DataWarehouse;
+USE DataWareHouse1;
 GO
 
 --- Create schemas
